@@ -4,6 +4,22 @@
 An AI learns the optimal strategy (hit, fold), for every possible card combination.
 This learning is done through Reinforcement Learning, and millions of play throughs. 
 
+### Requirements:
+```
+python 2.7
+```
+
+### Installing Requirements:
+```
+conda create --name python27 python=2.7
+source activate python27
+```
+
+### Usage:
+```
+python ExpectedSarsa.py
+```
+
 #### Output:
 ```
 Avg Return:-0.0333807272727
