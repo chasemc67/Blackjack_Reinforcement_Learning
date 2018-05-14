@@ -1,7 +1,7 @@
 ### Learning Optimal Blackjack Strategies with Reinforcement Learning
 
 
-An AI learns the optimal strategy (hit, fold), for every possible card combination.
+An Agent learns the optimal strategy (hit, fold), for every possible card combination.
 This learning is done through Reinforcement Learning, and millions of play throughs. 
 
 ### Requirements:
