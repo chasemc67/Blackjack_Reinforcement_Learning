@@ -7,10 +7,10 @@ from random import randint
 #== Globals
 Q = [[0 for x in range(2)]for x in range(181)]
 
-numEpisodes = 110000000
+numEpisodes = 1100000
 
-dropEpsilonEpisode = 1000000
-dropAlpha = 2500000
+dropEpsilonEpisode = 10000
+dropAlpha = 25000
 epsilon = 0.01
 alpha = 0.05
 
@@ -62,6 +62,9 @@ for episodeNum in range(numEpisodes):
 	S = blackjack.init()
 	G = 0
 
+	if episodeNum % 100 == 0:
+		print "" + str(episodeNum) + " of " + str(numEpisodes)
+
 	#while S is not in terminal state
 	while S != -1:
 
@@ -79,8 +82,8 @@ for episodeNum in range(numEpisodes):
 		R,Sprime = blackjack.sample(S,A)
 		G = G + R
 
-		if episodeNum > dropAlpha:
-			print R
+		#if episodeNum > dropAlpha:
+			#print R
 
 
 		if Sprime == -1:
@@ -103,10 +106,10 @@ for episodeNum in range(numEpisodes):
 
 	returnSum = returnSum + G
 
-#blackjack.printPolicy(showPolicy)
+blackjack.printPolicy(showPolicy)
 
-#print ""
-#print "Avg Return:" + str(returnSum / numEpisodes)	
+print ""
+print "Avg Return:" + str(returnSum / numEpisodes)	
 	
-#printSettings()
+printSettings()
 
